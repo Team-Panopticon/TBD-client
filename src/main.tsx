@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, redirect, RouterProvider } from 'react-router-dom'
 import './index.css'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <div>Root page</div>
+    loader: () => redirect('/meetings/new')
   },
   {
     path: 'meetings/new',
