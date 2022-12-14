@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, redirect, RouterProvider } from 'react-router-dom'
-import './index.css'
 import { MeetingCreate } from './pages/MeetingCreate'
 import { MeetingEdit } from './pages/MeetingEdit'
 import { MeetingResult } from './pages/MeetingResult'
