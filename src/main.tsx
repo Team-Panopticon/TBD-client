@@ -2,6 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, redirect, RouterProvider } from 'react-router-dom'
 import './index.css'
+import { MeetingCreate } from './pages/MeetingCreate'
+import { MeetingEdit } from './pages/MeetingEdit'
+import { MeetingResult } from './pages/MeetingResult'
+import { MeetingView } from './pages/MeetingView'
 
 const router = createBrowserRouter([
   {
@@ -10,19 +14,19 @@ const router = createBrowserRouter([
   },
   {
     path: 'meetings/new',
-    element: <div>Create a new meeting</div>
+    element: <MeetingCreate />
   },
   {
     path: 'meetings/:meetingId',
-    element: <div>View a meeting</div>
+    element: <MeetingView />
   },
   {
     path: 'meetings/:meetingId/edit',
-    element: <div>Edit a meeting</div>
+    element: <MeetingEdit />
   },
   {
     path: 'meetings/:meetingId/result',
-    element: <div>View voting results for a meeting</div>
+    element: <MeetingResult />
   }
 ])
 
