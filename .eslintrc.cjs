@@ -54,8 +54,7 @@ module.exports = {
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/no-unsafe-return': 'warn',
     '@typescript-eslint/no-unsafe-assignment': 'warn',
-    '@typescript-eslint/no-unused-vars': 'error',
-    'autofix/no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': 'warn',
   },
   settings: {
     react: {
