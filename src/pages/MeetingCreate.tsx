@@ -1,5 +1,11 @@
+import { Contents, Footer, Header, Page } from './styled';
+
 export function MeetingCreate() {
   return (
-    <div>MeetingCreate Page</div>
-  )
+    <Page>
+      <Header>Header Area</Header>
+      <Contents>Contents Area</Contents>
+      <Footer>Footer Area</Footer>
+    </Page>
+  );
 }
