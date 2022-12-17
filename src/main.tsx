@@ -1,36 +1,36 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, redirect, RouterProvider } from 'react-router-dom'
-import { MeetingCreate } from './pages/MeetingCreate'
-import { MeetingEdit } from './pages/MeetingEdit'
-import { MeetingResult } from './pages/MeetingResult'
-import { MeetingView } from './pages/MeetingView'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, redirect, RouterProvider } from 'react-router-dom';
+import { MeetingCreate } from './pages/MeetingCreate';
+import { MeetingEdit } from './pages/MeetingEdit';
+import { MeetingResult } from './pages/MeetingResult';
+import { MeetingView } from './pages/MeetingView';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    loader: () => redirect('/meetings/new')
+    loader: () => redirect('/meetings/new'),
   },
   {
     path: 'meetings/new',
-    element: <MeetingCreate />
+    element: <MeetingCreate />,
   },
   {
     path: 'meetings/:meetingId',
-    element: <MeetingView />
+    element: <MeetingView />,
   },
   {
     path: 'meetings/:meetingId/edit',
-    element: <MeetingEdit />
+    element: <MeetingEdit />,
   },
   {
     path: 'meetings/:meetingId/result',
-    element: <MeetingResult />
-  }
-])
+    element: <MeetingResult />,
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
-)
+  </React.StrictMode>,
+);
