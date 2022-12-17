@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, redirect, RouterProvider } from 'react-router-dom';
-import { DefaultTheme, ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import { MeetingCreate } from './pages/MeetingCreate';
 import { MeetingEdit } from './pages/MeetingEdit';
 import { MeetingResult } from './pages/MeetingResult';
 import { MeetingView } from './pages/MeetingView';
 import { theme } from './theme';
+import '../index.css';
 
 const router = createBrowserRouter([
   {
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <ThemeProvider theme={theme as DefaultTheme}>
+    <ThemeProvider theme={theme}>
       <RouterProvider router={router} />
     </ThemeProvider>
   </React.StrictMode>,
