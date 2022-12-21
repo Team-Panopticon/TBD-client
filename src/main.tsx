@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, redirect, RouterProvider } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
 import { MeetingCreate } from './pages/MeetingCreate';
 import { MeetingEdit } from './pages/MeetingEdit';
 import { MeetingResult } from './pages/MeetingResult';
@@ -31,6 +32,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RecoilRoot>
+      <RouterProvider router={router} />
+    </RecoilRoot>
   </React.StrictMode>,
 );
