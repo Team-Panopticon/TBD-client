@@ -1,17 +1,5 @@
 import { atom } from "recoil";
-
-export enum MeetingType {
-  date,
-  meal,
-}
-export enum MealType {
-  lunch,
-  dinner,
-}
-export enum MeetingStatus {
-  inProgress,
-  done,
-}
+import { MeetingStatus, MeetingType } from "../constants/meeting";
 
 export interface CreateMeetingState {
   name: string;
