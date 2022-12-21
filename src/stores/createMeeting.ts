@@ -7,7 +7,7 @@ export interface CreateMeetingState {
   dates: string[];
   type: MeetingType;
   /** ISO date string with timezone */
-  deadline: string | null;
+  deadline: string;
   status: MeetingStatus;
   password: string;
 }
