@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, redirect, RouterProvider } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 import { RecoilRoot } from 'recoil';
 import { MeetingCreate } from './pages/MeetingCreate';
 import { MeetingEdit } from './pages/MeetingEdit';
 import { MeetingResult } from './pages/MeetingResult';
 import { MeetingView } from './pages/MeetingView';
+import { theme } from './theme';
+import '../index.css';
 
 const router = createBrowserRouter([
   {
@@ -33,7 +36,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <RecoilRoot>
-      <RouterProvider router={router} />
+      <ThemeProvider theme={theme}>
+        <RouterProvider router={router} />
+      </ThemeProvider>
     </RecoilRoot>
   </React.StrictMode>,
 );
