@@ -1,11 +1,16 @@
-import { Contents, Footer, Header, Page } from './styled';
+import { Contents, Footer, Header, HeaderContainer, Page, PageTitle } from './styled';
 import { Input, Typography } from 'antd';
 import { InputContainer, InputLabel } from '../components/pages/MeetingCreate/styled';
 
 export function MeetingCreate() {
   return (
     <Page>
-      <Header>Header Area</Header>
+      <Header>
+        <HeaderContainer>
+          <div style={{ backgroundColor: 'aquamarine' }}>progress bar area</div>
+          <PageTitle>모임의 이름이 무엇인가요?</PageTitle>
+        </HeaderContainer>
+      </Header>
       <Contents>
         <InputContainer>
           <div>
