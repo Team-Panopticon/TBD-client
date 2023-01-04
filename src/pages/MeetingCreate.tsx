@@ -28,7 +28,13 @@ export function MeetingCreate() {
             <InputLabel htmlFor="name">
               <Typography>모임 이름</Typography>
             </InputLabel>
-            <Input id="name" allowClear style={{ borderRadius: 0 }} onChange={handleNameChange} />
+            <Input
+              id="name"
+              allowClear
+              style={{ borderRadius: 0 }}
+              onChange={handleNameChange}
+              placeholder="한사랑산악회 신년 모임"
+            />
           </div>
         </InputContainer>
       </Contents>
