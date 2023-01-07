@@ -1,8 +1,16 @@
-import { Contents, Footer, Header, HeaderContainer, Page, PageTitle } from './styled';
+import {
+  Contents,
+  Footer,
+  Header,
+  HeaderContainer,
+  Page,
+  PageTitle,
+} from '../components/pageLayout';
 import { Input, Typography } from 'antd';
-import { InputContainer, InputLabel } from '../components/pages/MeetingCreate/styled';
+import { InputContainer, InputLabel } from '../templates/MeetingCreate/styled';
 import { useRecoilState } from 'recoil';
 import { createMeetingState } from '../stores/createMeeting';
+import React from 'react';
 
 export function MeetingCreate() {
   const [meeting, setMeeting] = useRecoilState(createMeetingState);
